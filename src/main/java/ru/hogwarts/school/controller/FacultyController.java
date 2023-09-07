@@ -28,14 +28,14 @@ public class FacultyController {
     }
 
     @GetMapping("/{id}")
-    public Faculty getFacultyInfo(@PathVariable Long id) {
+    public Faculty getFacultyById(@PathVariable Long id) {
         return facultyService.getFacultyById(id);
     }
-
     @GetMapping("/by-student")
-    public List<String> getStudentsByFaculty(@RequestParam Long studentId) {
-        return facultyService.getStudentsByFaculty(studentId);
+    public Faculty getFacultyByStudent(@RequestParam Long studentId) {
+        return facultyService.getByStudentId(studentId);
     }
+
 
 //    @GetMapping("/filtered")
 //    public Collection<Faculty> getFacultiesByColor(@RequestParam("color") String color) {

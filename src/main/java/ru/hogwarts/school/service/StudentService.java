@@ -37,9 +37,11 @@ public class StudentService {
     public int getAmountOfStudents() {
         return studentRepository.getAmountOfStudents();
     }
+
     public double getAverageAgeOfStudents() {
         return studentRepository.getAverageAgeOfStudents();
     }
+
     public Collection<Student> getLastFiveStudents() {
         return studentRepository.getLastFiveStudents();
     }
